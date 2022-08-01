@@ -9,7 +9,10 @@ export const postsValidator = {
     "CREATE_POST": [
         check(['title'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 30})
+            .withMessage('Max 30 symbols'),
+        ,
         check(['shortDescription'])
             .isString()
             .withMessage('Invalid data type passed'),
@@ -23,7 +26,9 @@ export const postsValidator = {
     "UPDATE_POST": [
         check(['title'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 30})
+            .withMessage('Max 30 symbols'),
         check(['shortDescription'])
             .isString()
             .withMessage('Invalid data type passed'),

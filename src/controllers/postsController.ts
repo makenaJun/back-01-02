@@ -96,7 +96,7 @@ export const postController = {
                 ]
             }
 
-            return res.sendStatus(400).send(error);
+            return res.sendStatus(404).send(error);
         }
 
         posts = posts.map(el => {

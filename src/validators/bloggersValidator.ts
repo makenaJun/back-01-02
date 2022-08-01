@@ -9,7 +9,9 @@ export const bloggersValidator = {
     "CREATE_BLOGGER": [
         check(['name'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 20})
+            .withMessage('Max 20 symbols'),
         check(['youtubeUrl'])
             .isURL()
             .withMessage('Not correct url'),
@@ -20,7 +22,9 @@ export const bloggersValidator = {
             .withMessage('Invalid data type passed'),
         check(['name'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 20})
+            .withMessage('Max 20 symbols'),
         check(['youtubeUrl'])
             .isURL()
             .withMessage('Not correct url'),
