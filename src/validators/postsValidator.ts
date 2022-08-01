@@ -12,7 +12,6 @@ export const postsValidator = {
             .withMessage('Invalid data type passed')
             .isLength({max: 30})
             .withMessage('Max 30 symbols'),
-        ,
         check(['shortDescription'])
             .isString()
             .withMessage('Invalid data type passed'),
