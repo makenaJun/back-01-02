@@ -14,10 +14,14 @@ export const postsValidator = {
             .withMessage('Max 30 symbols'),
         check(['shortDescription'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 100})
+            .withMessage('Max 100 symbols'),
         check(['content'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 1000})
+            .withMessage('Max 1000 symbols'),
         check(['bloggerId'])
             .isNumeric()
             .withMessage('Invalid data type passed')
@@ -30,10 +34,14 @@ export const postsValidator = {
             .withMessage('Max 30 symbols'),
         check(['shortDescription'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 100})
+            .withMessage('Max 100 symbols'),
         check(['content'])
             .isString()
-            .withMessage('Invalid data type passed'),
+            .withMessage('Invalid data type passed')
+            .isLength({max: 1000})
+            .withMessage('Max 1000 symbols'),
         check(['bloggerId'])
             .isNumeric()
             .withMessage('Invalid data type passed')

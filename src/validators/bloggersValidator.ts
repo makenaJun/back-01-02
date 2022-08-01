@@ -10,11 +10,13 @@ export const bloggersValidator = {
         check(['name'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 20})
-            .withMessage('Max 20 symbols'),
+            .isLength({max: 15})
+            .withMessage('Max 15 symbols'),
         check(['youtubeUrl'])
             .isURL()
-            .withMessage('Not correct url'),
+            .withMessage('Not correct url')
+            .isLength({max: 100})
+            .withMessage('Max 100 symbols'),
     ],
     "UPDATE_BLOGGER": [
         check(['id'])
@@ -23,11 +25,13 @@ export const bloggersValidator = {
         check(['name'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 20})
-            .withMessage('Max 20 symbols'),
+            .isLength({max: 15})
+            .withMessage('Max 15 symbols'),
         check(['youtubeUrl'])
             .isURL()
-            .withMessage('Not correct url'),
+            .withMessage('Not correct url')
+            .isLength({max: 100})
+            .withMessage('Max 100 symbols'),
     ],
     "DELETE_BLOGGER": [
         check(['id'])
