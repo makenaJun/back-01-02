@@ -10,18 +10,21 @@ export const postsValidator = {
         check(['title'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 30})
-            .withMessage('Max 30 symbols'),
+            .trim()
+            .isLength({min: 1,max: 30})
+            .withMessage('Min 1, Max 30 symbols'),
         check(['shortDescription'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 100})
-            .withMessage('Max 100 symbols'),
+            .trim()
+            .isLength({min: 1,max: 100})
+            .withMessage('Min 1, Max 100 symbols'),
         check(['content'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 1000})
-            .withMessage('Max 1000 symbols'),
+            .trim()
+            .isLength({min: 1,max: 1000})
+            .withMessage('Min 1, Max 1000 symbols'),
         check(['bloggerId'])
             .isNumeric()
             .withMessage('Invalid data type passed')
@@ -30,18 +33,21 @@ export const postsValidator = {
         check(['title'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 30})
-            .withMessage('Max 30 symbols'),
+            .trim()
+            .isLength({min: 1,max: 30})
+            .withMessage('Min 1, Max 30 symbols'),
         check(['shortDescription'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 100})
-            .withMessage('Max 100 symbols'),
+            .trim()
+            .isLength({min: 1,max: 100})
+            .withMessage('Min 1, Max 100 symbols'),
         check(['content'])
             .isString()
             .withMessage('Invalid data type passed')
-            .isLength({max: 1000})
-            .withMessage('Max 1000 symbols'),
+            .trim()
+            .isLength({min: 1,max: 1000})
+            .withMessage('Min 1, Max 1000 symbols'),
         check(['bloggerId'])
             .isNumeric()
             .withMessage('Invalid data type passed')
