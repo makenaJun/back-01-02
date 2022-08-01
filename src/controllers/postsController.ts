@@ -59,7 +59,7 @@ export const postController = {
                 ]
             }
 
-            return res.sendStatus(400).send(error);
+            return res.status(400).send(error);
         }
 
         const newPost: PostType = {
@@ -96,7 +96,7 @@ export const postController = {
                 ]
             }
 
-            return res.sendStatus(404).send(error);
+            return res.status(404).send(error);
         }
 
         const blogger = bloggers.find(el => el.id === bloggerId);
@@ -111,7 +111,7 @@ export const postController = {
                 ]
             }
 
-            return res.sendStatus(400).send(error);
+            return res.status(400).send(error);
         }
 
         posts = posts.map(el => {
