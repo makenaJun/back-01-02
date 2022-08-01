@@ -99,6 +99,21 @@ export const postController = {
             return res.sendStatus(404).send(error);
         }
 
+        const blogger = bloggers.find(el => el.id === bloggerId);
+
+        if (!blogger) {
+            const error: ErrorResponseType = {
+                errorsMessages: [
+                    {
+                        message: "Blogger id is not correct",
+                        field: "bloggerId"
+                    }
+                ]
+            }
+
+            return res.sendStatus(400).send(error);
+        }
+
         posts = posts.map(el => {
             if (el.id === +id) {
                 return {
